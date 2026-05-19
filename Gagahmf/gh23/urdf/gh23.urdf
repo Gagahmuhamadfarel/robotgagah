@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="gh23">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="7" />
+      <inertia
+        ixx="0.001"
+        ixy="0"
+        ixz="0"
+        iyy="0.001"
+        iyz="0"
+        izz="0.001" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://gh23/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://gh23/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="welkananbawah">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.6" />
+      <inertia
+        ixx="0.001"
+        ixy="0"
+        ixz="0"
+        iyy="0.001"
+        iyz="0"
+        izz="0.001" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://gh23/meshes/welkananbawah.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://gh23/meshes/welkananbawah.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rodakananbawah"
+    type="continuous">
+    <origin
+      xyz="-0.19987 -0.15483 -0.0044227"
+      rpy="1.5708 0 1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="welkananbawah" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      effort="100"
+      velocity="20" />
+    <dynamics
+      damping="2"
+      friction="0.8" />
+  </joint>
+  <link
+    name="welkananatas">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.6" />
+      <inertia
+        ixx="0.001"
+        ixy="0"
+        ixz="0"
+        iyy="0.001"
+        iyz="0"
+        izz="0.001" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://gh23/meshes/welkananatas.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://gh23/meshes/welkananatas.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rodakananatas"
+    type="continuous">
+    <origin
+      xyz="0.20013 -0.15483 -0.0044227"
+      rpy="0 -1.5708 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="welkananatas" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      effort="100"
+      velocity="20" />
+    <dynamics
+      damping="2"
+      friction="0.8" />
+  </joint>
+  <link
+    name="welkiriatas">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.6" />
+      <inertia
+        ixx="0.001"
+        ixy="0"
+        ixz="0"
+        iyy="0.001"
+        iyz="0"
+        izz="0.001" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://gh23/meshes/welkiriatas.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://gh23/meshes/welkiriatas.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rodakiriatas"
+    type="continuous">
+    <origin
+      xyz="0.20013 0.15442 -0.0044227"
+      rpy="1.5708 -1.5708 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="welkiriatas" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      effort="100"
+      velocity="20" />
+    <dynamics
+      damping="2"
+      friction="0.8" />
+  </joint>
+  <link
+    name="welkiribawah">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.6" />
+      <inertia
+        ixx="0.001"
+        ixy="0"
+        ixz="0"
+        iyy="0.001"
+        iyz="0"
+        izz="0.001" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://gh23/meshes/welkiribawah.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://gh23/meshes/welkiribawah.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rodakiribawah"
+    type="continuous">
+    <origin
+      xyz="-0.19987 0.15442 -0.0044227"
+      rpy="-1.5413 0 -1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="welkiribawah" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      effort="100"
+      velocity="20" />
+    <dynamics
+      damping="2"
+      friction="0.8" />
+  </joint>
+</robot>
